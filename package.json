@@ -71,6 +71,7 @@
     "file-loader": "^0.8.5",
     "firebase": "^3.0.3",
     "font-awesome": "^4.6.1",
+    "json-loader": "^0.5.4",
     "lodash": "^4.13.1",
     "ng-dialog": "^0.6.0",
     "node-bourbon": "^4.2.8",

@@ -34,9 +34,13 @@ module.exports = {
       include: /app\/views/,
       loader: 'ngtemplate!html'
     }, {
-      test: /.js$/,
+      test: /\.js$/,
       exclude: /node_modules/,
       loaders: ['ng-annotate', 'babel?presets[]=es2015']
+    }, {
+      test: /\.json$/,
+      exclude: /node_modules/,
+      loader: 'json'
     }],
     preLoaders: [{
       test: /\.js$/,

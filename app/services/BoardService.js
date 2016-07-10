@@ -1,8 +1,6 @@
 import Chance from 'chance';
-import Firebase from 'firebase';
+import firebase from './firebase';
 
-const chance = new Chance();
-const FIREBASE_PROD_URL = 'https://blinding-torch-6662.firebaseio.com';
 const BoardService = ($q) => {
   let boardsRef;
   const generateBoardID = () => chance.hash({
@@ -11,7 +9,7 @@ const BoardService = ($q) => {
 
   return {
     connect: () => {
-      boardsRef = new Firebase(`${FIREBASE_PROD_URL}/boards`);
+      boardsRef = firebase.database().ref('boards');
     },
     create: (name) => {
       const boardID = generateBoardID();
